@@ -11,6 +11,11 @@
 - **💾 大缓冲区**: 减少网络请求频次
 - **⚡ 快速重试**: 10秒超时快速失败重试
 
+## 📸 项目演示
+
+![项目演示](demo.png)
+
+
 ## 🎯 测试场景
 
 本项目包含4个测试视频源：
@@ -67,7 +72,7 @@ npm run build
 ```jsx
 import OptimizedVideoPlayer from './components/OptimizedVideoPlayer';
 
-<OptimizedVideoPlayer 
+<OptimizedVideoPlayer
   src="https://example.com/video.m3u8"
   options={{
     width: 1200,
@@ -104,32 +109,32 @@ const device = useDeviceInfo();
 {
   // 多线程优化
   enableWorker: true,
-  
+
   // 重试策略（针对10秒切片）
   fragLoadingMaxRetry: 8,
   fragLoadingMaxRetryTimeout: 64000,
   fragLoadingTimeOut: 8000, // 减少超时时间
-  
+
   // 10秒切片缓冲策略
   maxBufferLength: 80, // 80秒 = 8个10秒切片
   maxBufferSize: 200 * 1000 * 1000, // 200MB缓存
   maxMaxBufferLength: 240, // 最大240秒缓冲
   maxBufferHole: 0.05, // 减少缓冲间隙
-  
+
   // 启动优化
   autoStartLoad: true,
   startFragPrefetch: true,
   testBandwidth: false, // 关闭带宽测试减少延迟
-  
+
   // 10秒切片ABR优化
   abrEwmaDefaultEstimate: 2000000, // 提高初始估计值
   abrBandWidthFactor: 0.95, // 更激进的码率选择
   abrBandWidthUpFactor: 0.85,
-  
+
   // 质量策略
   startLevel: -1,
   capLevelToPlayerSize: true,
-  
+
   // 10秒切片缓存策略
   backBufferLength: 60, // 保留60秒历史缓冲
   liveSyncDurationCount: 2, // 预加载2个切片(20秒)
