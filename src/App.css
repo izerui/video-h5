@@ -1,0 +1,557 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.App-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.App-header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.App-main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.video-info {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.video-info h3 {
+    margin: 0 0 10px 0;
+    color: #667eea;
+    font-size: 1.3rem;
+}
+
+.video-url {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    color: #666;
+    word-break: break-all;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.controls-section {
+    margin-bottom: 40px;
+}
+
+.controls-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.video-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.video-button {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.video-button:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-button.active {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.video-type {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.video-name {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.info-section {
+    margin-bottom: 40px;
+}
+
+.info-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    margin: 0 0 10px 0;
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.debug-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.debug-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.debug-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.debug-info p {
+    margin: 0;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.debug-info span {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.App-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.App-footer p {
+    margin: 0;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* 对比测试样式 */
+.comparison-section {
+    margin-bottom: 40px;
+}
+
+.comparison-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.comparison-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-card h3 {
+    margin: 0 0 15px 0;
+    color: #667eea;
+    font-size: 1.4rem;
+}
+
+.comparison-card ul {
+    margin: 0 0 20px 0;
+    padding-left: 20px;
+}
+
+.comparison-card li {
+    margin: 8px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.comparison-card .load-time {
+    margin: 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.comparison-card .load-time span {
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.compare-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.compare-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.compare-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.optimization-tips {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+}
+
+.optimization-tips h4 {
+    margin: 0 0 15px 0;
+    color: #667eea;
+    font-size: 1.3rem;
+}
+
+.optimization-tips ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.optimization-tips li {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.optimization-tips strong {
+    color: #333;
+}
+
+/* 响应式对比样式 */
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .comparison-card {
+        padding: 20px;
+    }
+
+    .compare-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .App-header {
+        padding: 30px 15px;
+    }
+
+    .App-header h1 {
+        font-size: 2rem;
+    }
+
+    .App-main {
+        padding: 20px 15px;
+    }
+
+    .video-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .debug-info {
+        grid-template-columns: 1fr;
+    }
+
+    .loading-indicator {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .performance-metrics {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
+
+/* 预加载控制面板样式 */
+.preload-section {
+    margin-bottom: 40px;
+}
+
+.preload-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.preload-controls {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+    margin-bottom: 25px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.strategy-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.strategy-btn {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.strategy-btn:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.strategy-btn.active {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.strategy-btn small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.preload-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.preload-info h4 {
+    margin: 0 0 15px 0;
+    color: #667eea;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+}
+
+.info-item span:first-child {
+    color: #666;
+}
+
+.info-item span:last-child {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.preload-tips {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.preload-tips h4 {
+    margin: 0 0 10px 0;
+    color: #667eea;
+}
+
+.preload-tips ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.preload-tips li {
+    margin: 8px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.preload-indicator {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: rgba(0, 100, 0, 0.9);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 1001;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.preload-fill {
+    background: linear-gradient(90deg, #00ff00, #00cc00);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 响应式预加载样式 */
+@media (max-width: 768px) {
+    .strategy-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preload-indicator {
+        top: 60px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
